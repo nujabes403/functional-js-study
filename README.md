@@ -1,7 +1,7 @@
 # functional-js-study
 
 
-#1.Iterator
+# 1.Iterator
 ```
 /* 
   iterator는 어떤 자료구조를 순회(traverse)하는데 쓰이는 pointer라고 생각하면 된다. 
@@ -34,7 +34,7 @@ const iterator3 = (count = 0, length) => ({
 })
 ```
 
-#2. Iterable
+# 2. Iterable
 ```
 /* 
   [Symbol.iterator] 라는 특정한(specific)이름의 iterator가 있으면 Iterable
@@ -69,7 +69,7 @@ const iterable2 = (data, index = 0) => ({
 })
 ```
 
-#3. Iterator이면서 Iterable
+# 3. Iterator이면서 Iterable
 ```
 /*
   (1)위에서 말했듯, Iterator의 조건은 next method가 구현되어있어야 할 것.
