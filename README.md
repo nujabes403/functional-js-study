@@ -1,8 +1,9 @@
 # functional-js-study
 
+
+#1.Iterator
 ```
 /* 
-  1. iterator
   iterator는 어떤 자료구조를 순회(traverse)하는데 쓰이는 pointer라고 생각하면 된다. 
   (ex: database에서의 cursor 역할)
   next method가 구현되어 있으면 Iterator
@@ -31,9 +32,11 @@ const iterator2 = (count = 0) => ({
 const iterator3 = (count = 0, length) => ({
   next: () => ({ value: count++, done: count > length })
 })
+```
 
+#2. Iterable
+```
 /* 
-  2. iterable 
   [Symbol.iterator] 라는 특정한(specific)이름의 iterator가 있으면 Iterable
   [Symbol.iterator]는 iterator이므로 위에서 봤듯이 당연히 next method가 구현되어 있어야 함.
   for of 구문으로 순회(traverse) 가능
@@ -64,9 +67,11 @@ const iterable2 = (data, index = 0) => ({
     }
   }
 })
+```
 
+#3. Iterator이면서 Iterable
+```
 /*
-  3. Iterator이면서 Iterable
   (1)위에서 말했듯, Iterator의 조건은 next method가 구현되어있어야 할 것.
   (2)위에서 말했듯, Iterable의 조건은 [Symbol.iterator] 라는 이름의 iterator가 구현되어 있어야 할 것.
   
